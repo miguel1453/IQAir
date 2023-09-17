@@ -17,6 +17,7 @@ class AirQViewModel: ObservableObject {
     init() {
         fetchNearestAirQ()
         loadFavorites()
+//        UserDefaults.standard.removeObject(forKey: "favorites")
     }
     
     

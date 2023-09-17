@@ -10,9 +10,9 @@ import SwiftUI
 struct SearchAirQView: View {
     @Binding var isPresented: Bool
     @ObservedObject var vm: AirQViewModel
-    @State var city: String = "Wilmington"
-    @State var state: String = "North carolina"
-    @State var country: String  = "usa"
+    @State var city: String = ""
+    @State var state: String = ""
+    @State var country: String  = ""
     @State var airQInfo: AirQInfo? = nil
     var body: some View {
         NavigationStack {
