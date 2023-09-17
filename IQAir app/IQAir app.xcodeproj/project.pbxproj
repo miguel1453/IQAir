@@ -11,12 +11,12 @@
 		7E635EF02AB4AEAC0064AB49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E635EEF2AB4AEAC0064AB49 /* ContentView.swift */; };
 		7E635EF22AB4AEAE0064AB49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E635EF12AB4AEAE0064AB49 /* Assets.xcassets */; };
 		7E635EF52AB4AEAE0064AB49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E635EF42AB4AEAE0064AB49 /* Preview Assets.xcassets */; };
-		7E635EFC2AB4AFB30064AB49 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E635EFB2AB4AFB30064AB49 /* LocationService.swift */; };
 		7E635EFE2AB4B0E20064AB49 /* AirQService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E635EFD2AB4B0E20064AB49 /* AirQService.swift */; };
 		7E635F012AB4B59E0064AB49 /* AirQInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E635F002AB4B59E0064AB49 /* AirQInfo.swift */; };
 		7E635F032AB4BE670064AB49 /* AirQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E635F022AB4BE670064AB49 /* AirQViewModel.swift */; };
 		7E635F052AB4C3530064AB49 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E635F042AB4C3530064AB49 /* HomePageView.swift */; };
 		7E635F072AB4CEDC0064AB49 /* AirQInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E635F062AB4CEDC0064AB49 /* AirQInfoView.swift */; };
+		7E635F092AB4ED150064AB49 /* SearchAirQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E635F082AB4ED150064AB49 /* SearchAirQView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,12 +25,12 @@
 		7E635EEF2AB4AEAC0064AB49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E635EF12AB4AEAE0064AB49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E635EF42AB4AEAE0064AB49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7E635EFB2AB4AFB30064AB49 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		7E635EFD2AB4B0E20064AB49 /* AirQService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQService.swift; sourceTree = "<group>"; };
 		7E635F002AB4B59E0064AB49 /* AirQInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQInfo.swift; sourceTree = "<group>"; };
 		7E635F022AB4BE670064AB49 /* AirQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQViewModel.swift; sourceTree = "<group>"; };
 		7E635F042AB4C3530064AB49 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		7E635F062AB4CEDC0064AB49 /* AirQInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQInfoView.swift; sourceTree = "<group>"; };
+		7E635F082AB4ED150064AB49 /* SearchAirQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAirQView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,16 +63,13 @@
 		7E635EEC2AB4AEAC0064AB49 /* IQAir app */ = {
 			isa = PBXGroup;
 			children = (
+				7E635F0B2AB4F3630064AB49 /* ViewModles */,
+				7E635F0A2AB4F1A30064AB49 /* Views */,
 				7E635EFF2AB4B5300064AB49 /* Models */,
 				7E635EED2AB4AEAC0064AB49 /* IQAir_appApp.swift */,
-				7E635EEF2AB4AEAC0064AB49 /* ContentView.swift */,
 				7E635EF12AB4AEAE0064AB49 /* Assets.xcassets */,
 				7E635EF32AB4AEAE0064AB49 /* Preview Content */,
-				7E635EFB2AB4AFB30064AB49 /* LocationService.swift */,
 				7E635EFD2AB4B0E20064AB49 /* AirQService.swift */,
-				7E635F022AB4BE670064AB49 /* AirQViewModel.swift */,
-				7E635F042AB4C3530064AB49 /* HomePageView.swift */,
-				7E635F062AB4CEDC0064AB49 /* AirQInfoView.swift */,
 			);
 			path = "IQAir app";
 			sourceTree = "<group>";
@@ -91,6 +88,25 @@
 				7E635F002AB4B59E0064AB49 /* AirQInfo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7E635F0A2AB4F1A30064AB49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E635EEF2AB4AEAC0064AB49 /* ContentView.swift */,
+				7E635F042AB4C3530064AB49 /* HomePageView.swift */,
+				7E635F082AB4ED150064AB49 /* SearchAirQView.swift */,
+				7E635F062AB4CEDC0064AB49 /* AirQInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E635F0B2AB4F3630064AB49 /* ViewModles */ = {
+			isa = PBXGroup;
+			children = (
+				7E635F022AB4BE670064AB49 /* AirQViewModel.swift */,
+			);
+			path = ViewModles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,10 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E635F092AB4ED150064AB49 /* SearchAirQView.swift in Sources */,
 				7E635EF02AB4AEAC0064AB49 /* ContentView.swift in Sources */,
 				7E635F072AB4CEDC0064AB49 /* AirQInfoView.swift in Sources */,
 				7E635F032AB4BE670064AB49 /* AirQViewModel.swift in Sources */,
-				7E635EFC2AB4AFB30064AB49 /* LocationService.swift in Sources */,
 				7E635EFE2AB4B0E20064AB49 /* AirQService.swift in Sources */,
 				7E635F012AB4B59E0064AB49 /* AirQInfo.swift in Sources */,
 				7E635F052AB4C3530064AB49 /* HomePageView.swift in Sources */,
