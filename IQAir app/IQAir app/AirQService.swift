@@ -19,7 +19,7 @@ struct AirQService {
         }
         let (data, _) = try await session.data(from: url)
         
-
+        print(url)
         return try decoder.decode(AirQInfo.self, from: data)
       
     }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomePageView: View {
-    @StateObject private var vm = AirQViewModel()
+    @ObservedObject var vm: AirQViewModel
     var body: some View {
         NavigationView {
             ScrollView {
@@ -31,6 +31,6 @@ struct HomePageView: View {
 
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageView()
+        HomePageView(vm:  AirQViewModel())
     }
 }

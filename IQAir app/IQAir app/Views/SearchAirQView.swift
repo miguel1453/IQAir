@@ -40,7 +40,7 @@ struct SearchAirQView: View {
                         if let airQInfo = airQInfo {
                             AirQInfoView(airQInfo: airQInfo)
                             Button {
-                                vm.addFavorite(airQData: airQInfo.data)
+                                vm.addFavorite(airQInfo: airQInfo)
                                 isPresented.toggle()
                             } label: {
                                 Text("Add")

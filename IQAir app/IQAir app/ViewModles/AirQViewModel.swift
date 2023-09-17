@@ -39,9 +39,10 @@ class AirQViewModel: ObservableObject {
         
     }
     
-    func addFavorite(airQData: AirQData) {
-        favoriteLocations.append(airQData)
+    func addFavorite(airQInfo: AirQInfo) {
+        favoriteLocations.append(airQInfo.data)
         saveFavorites()
+        favoriteAirQs.append(airQInfo)
     }
     
     private func saveFavorites() {

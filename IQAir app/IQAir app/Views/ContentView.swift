@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isPresented: Bool = false
+    @StateObject var vm = AirQViewModel()
    
     var body: some View {
         NavigationStack {
             VStack {
-                HomePageView()
+                HomePageView(vm: vm)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button {
@@ -30,7 +31,7 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $isPresented) {
-            SearchAirQView(isPresented: $isPresented, vm:   AirQViewModel())
+            SearchAirQView(isPresented: $isPresented, vm:  vm)
         }
         
     }
