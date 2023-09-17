@@ -13,12 +13,12 @@ struct AirQInfoView: View {
         RoundedRectangle(cornerRadius: 10)
             .foregroundColor(backGroundColor(for: airQInfo.data.current.pollution.aqius)) // Set the desired background color
                    .padding()
-                   .frame(height: 300)/// Add some padding to the background
+                   .frame(height: 200)/// Add some padding to the background
                    .overlay(
                     VStack(alignment: .leading) {
                         Text("\(airQInfo.data.city), \(airQInfo.data.state) \(airQInfo.data.country)")
                             .font(Font.custom("Apple SD Gothic Neo", size: 25))
-                            .foregroundColor(.white)
+                            
                         Text("Air Quality: \(airQInfo.data.current.pollution.aqicn)")
                         
                     }
@@ -31,13 +31,19 @@ struct AirQInfoView: View {
 
 private func backGroundColor(for airQuality: Int) -> Color {
     if airQuality < 50 {
-        return Color(red: 0.47, green: 0.74, blue: 0.56)    }
-    else {
+        return Color(red: 0.47, green: 0.74, blue: 0.56)
+    } else if airQuality < 100 {
+        return Color(red: 0.75, green: 0.92, blue: 0.62)
+    } else if airQuality < 150 {
+        return Color(red: 1, green: 1, blue: 0.62)
+    } else {
         return Color(red: 1, green: 0.38, blue: 0.22)
     }
 }
-struct AirQInfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        AirQInfoView(airQInfo: AirQInfo(data:  AirQData(city: "Wilmington", state: "NC", country: "USA", location: Location(type: "idk", coordinates: [0,0]), current: CurrentData(pollution: PollutionData(ts: "", aqius: 0, mainus: "", aqicn: 0, maincn: ""), weather: WeatherDetails(ts: "", tp: 0, pr: 0, hu: 0, ws: 0, wd: 0, ic: "")))))
-    }
-}
+
+
+//struct AirQInfoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AirQInfoView(airQInfo: AirQInfo(data:  AirQData(city: "Wilmington", state: "NC", country: "USA", current: CurrentData(pollution: PollutionData(ts: "", aqius: 140, mainus: "", aqicn: 0, maincn: "")))))
+//    }
+//}

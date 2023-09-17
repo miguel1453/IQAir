@@ -13,9 +13,15 @@ struct HomePageView: View {
         NavigationView {
             ScrollView {
                 Text("Current Location")
+                    .font(Font.custom("Apple SD Gothic Neo", size: 30))
+                    
                 AirQInfoView(airQInfo: vm.nearestAirQ)
                 
                 Text("Favorites")
+                    .font(Font.custom("Apple SD Gothic Neo", size: 30))
+                ForEach(vm.favoriteAirQs) { data in
+                    AirQInfoView(airQInfo: data)
+                }
                 
             }
             
